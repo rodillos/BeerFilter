@@ -34,7 +34,7 @@ class Header extends React.Component{
     render(){
         const showMeTheBeer = () => {
             const {filter, param} = this.state;
-            const filterParams = (filter != '' && param != '') ? (filter +'='+ param) : ''; 
+            const filterParams = (filter !== '' && param !== '') ? (filter +'='+ param) : ''; 
             let url = 'https://api.punkapi.com/v2/beers?' + filterParams; 
             fetch(url)
             .then((response) => {
